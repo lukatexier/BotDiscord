@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Home from './pages/home';
 import Etudiants from './pages/etudiants';
 import Edt from './pages/edt';
+import EDTList from "./pages/allEdt";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/etudiants" element={<Etudiants />} />
         <Route path="/edt/:id" element={<Edt />} />
+        <Route path="/edt" element={<EDTList />} />
       </Routes>
     </Router>
   );

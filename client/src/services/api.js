@@ -40,3 +40,9 @@ export async function setCours(id, jour, heure, cours) {
   if (!res.ok) throw new Error("Erreur lors de la mise à jour du cours");
   return res.json();
 }
+
+export async function fetchAllEDT() {
+    const res = await fetch(`${BASE_URL}/edt`);
+    if (!res.ok) throw new Error("Erreur lors de la récupération de tous les emplois du temps");
+    return res.json();
+}

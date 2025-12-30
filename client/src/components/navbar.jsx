@@ -8,7 +8,7 @@ function Navbar() {
       <nav>
         <Link style={styles.link} to="/">Accueil</Link>
         <Link style={styles.link} to="/etudiants">Étudiants</Link>
-        <Link style={styles.link} to="#">Emplois du temps</Link>
+        <Link style={styles.link} to="/edt">Emplois du temps</Link>
         <Link style={styles.link} to="#">Connexion</Link>
       </nav>
     </header>
