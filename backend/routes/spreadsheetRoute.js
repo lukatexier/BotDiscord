@@ -8,6 +8,9 @@ router.get('/etudiants', spreadsheetController.getUsers);
 // Récupérer l'EDT d'un étudiant
 router.get('/etudiants/:id', spreadsheetController.getEDT);
 
+// Récupérer tous les EDT
+router.get('/edt', spreadsheetController.getAllEDT);
+
 // Modifier un cours d'un étudiant
 router.post('/etudiants/:id', spreadsheetController.setCours);
 

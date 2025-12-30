@@ -151,10 +151,32 @@ async function setCours(id, jour, heure, cours) {
 }
 
 
+
+async function getAllEDT() {
+  const client = await getAuthClient();
+  const users = await getUser(client);
+  const allEDT = {};
+
+  for (const user of users) {
+    try {
+      const edt = await lireEDT(user.id, client);
+      allEDT[user.id] = edt;
+    } catch (error) {
+      console.warn(`Pas de feuille pour l'étudiant ${user.id}: ${error.message}`);
+      allEDT[user.id] = null; 
+    }
+  }
+
+  return allEDT;
+}
+
+
+
 module.exports = {
   lireUser,
   lireEDT,
-  setCours
+  setCours, 
+  getAllEDT
 };
 
 

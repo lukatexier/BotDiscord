@@ -35,10 +35,18 @@ const setCours = async (req, res, next) => {
   }
 };
 
-
+const getAllEDT = async (req, res) => {
+  try {
+    const allEDT = await spreadsheetService.getAllEDT();
+    res.json(allEDT);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 module.exports = {
   getUsers,
   getEDT,
-  setCours
+  setCours,
+  getAllEDT
 };
