@@ -4,7 +4,6 @@ import Navbar from './components/navbar';
 import Home from './pages/home';
 import Etudiants from './pages/etudiants';
 import Edt from './pages/edt';
-import EDTList from "./pages/allEdt";
 
 function App() {
   return (
