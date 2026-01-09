@@ -38,12 +38,12 @@ router.get('/oauth2/callback', async (req, res) => {
 });
 
 router.get('/connexion', (req, res) => {
-    const discordAuthUrl = `${process.env.url_discord}/authorize?client_id=${process.env.CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REDIRECT_URI)}&response_type=code&scope=identify`;
+    const discordAuthUrl = `${process.env.URL_DISCORD}/authorize?client_id=${process.env.CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REDIRECT_URI)}&response_type=code&scope=identify`;
     res.redirect(discordAuthUrl);
 });
 
 router.get('/connexion/bis', (req, res) => {
-    const discordAuthUrl = `${process.env.url_discord}/authorize?client_id=${process.env.CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REDIRECT_URI)}&response_type=code&scope=identify`;
+    const discordAuthUrl = `${process.env.URL_DISCORD}/authorize?client_id=${process.env.CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REDIRECT_URI)}&response_type=code&scope=identify`;
     res.send(discordAuthUrl);
 });
 

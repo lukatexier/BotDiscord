@@ -9,6 +9,9 @@ const spreadsheet = require('./routes/spreadsheetRoute');
 
 app.use('/api/spreadsheet', spreadsheet);
 
+const authRouter = require('./routes/auth');
+app.use('/api/auth', authRouter);
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);

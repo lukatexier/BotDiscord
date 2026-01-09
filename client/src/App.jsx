@@ -5,6 +5,7 @@ import Home from './pages/home';
 import Etudiants from './pages/etudiants';
 import Edt from './pages/edt';
 
+
 function App() {
   return (
     <Router>
@@ -13,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/etudiants" element={<Etudiants />} />
         <Route path="/edt/:id" element={<Edt />} />
-        <Route path="/edt" element={<EDTList />} />
       </Routes>
     </Router>
   );
